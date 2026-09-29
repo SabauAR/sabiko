@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="SC SABIKO SRL – transport rutier european cu 116 ansambluri proprii, depozit frigorific și import-export."
+  />
+
+  <meta name="theme-color" content="#0A2540" />
+
+  <title>SC SABIKO SRL | Transport rutier european</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root{
+      --navy:#0A2540;
+      --blue:#1D64F2;
+      --blue-hover:#1557D8;
+      --blue-soft:#EAF1FF;
+      --bg:#F7F9FC;
+      --text:#122033;
+      --muted:#6B7788;
+      --line:#E4E9F0;
+      --white:#FFFFFF;
+
+      --max:1180px;
+      --header-height:78px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Inter, Arial, sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+
+    body.menu-open{
+      overflow:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button{
+      font:inherit;
+    }
+
+    .container{
+      width:min(var(--max), calc(100% - 40px));
+      margin-inline:auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,255,255,.97);
+      backdrop-filter:blur(12px);
+
+      border-bottom:1px solid rgba(228,233,240,.95);
+    }
+
+    nav{
+      min-height:var(--header-height);
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:28px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      flex-shrink:0;
+    }
+
+    .logo-img{
+      display:block;
+
+      width:auto;
+      height:48px;
+
+      object-fit:contain;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:30px;
+
+      font-size:14px;
+      font-weight:500;
+      color:#425066;
+    }
+
+    .nav-links a{
+      transition:color .2s ease;
+    }
+
+    .nav-links a:hover{
+      color:var(--navy);
+    }
+
+    .contact-link{
+      padding:10px 16px;
+
+      border:1px solid var(--navy);
+      border-radius:9px;
+
+      color:var(--navy)!important;
+      font-weight:600;
+    }
+
+    .contact-link:hover{
+      background:var(--navy);
+      color:#fff!important;
+    }
+
+    .menu-btn{
+      display:none;
+
+      width:46px;
+      height:46px;
+
+      border:0;
+      border-radius:10px;
+
+      background:#F4F7FA;
+
+      color:var(--navy);
+      font-size:26px;
+
+      cursor:pointer;
+    }
+
+    /* =========================
+       GENERAL
+    ========================== */
+
+    section{
+      padding:95px 0;
+      scroll-margin-top:95px;
+    }
+
+    .light-section{
+      background:var(--bg);
+    }
+
+    h1,
+    h2,
+    h3{
+      margin:0;
+
+      font-family:Manrope, sans-serif;
+      color:var(--navy);
+    }
+
+    .section-intro{
+      max-width:760px;
+      margin-bottom:48px;
+    }
+
+    .section-label{
+      margin-bottom:12px;
+
+      color:var(--blue);
+
+      font-size:12px;
+      font-weight:700;
+
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+    h2{
+      font-size:clamp(34px, 4vw, 52px);
+      line-height:1.08;
+      letter-spacing:-2px;
+    }
+
+    .section-intro p{
+      margin:18px 0 0;
+
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      min-height:48px;
+      padding:0 19px;
+
+      border-radius:9px;
+
+      font-size:14px;
+      font-weight:600;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn-primary{
+      background:var(--blue);
+      color:#fff;
+    }
+
+    .btn-primary:hover{
+      background:var(--blue-hover);
+    }
+
+    .btn-secondary{
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--navy);
+    }
+
+    .btn-secondary:hover{
+      border-color:#BBC5D2;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero{
+      padding:110px 0 100px;
+      background-color:var(--navy);
+      background-image:
+        linear-gradient(90deg, rgba(6,24,43,.92) 0%, rgba(6,24,43,.76) 45%, rgba(6,24,43,.28) 100%),
+        url("pozabackround.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .hero h1{
+      color:#fff;
+    }
+
+    .hero .eyebrow{
+      color:#B8D1FF;
+    }
+
+    .hero .hero-grid > div:first-child > p{
+      color:#E2EAF3;
+    }
+
+    .hero .hero-card{
+      background:rgba(255,255,255,.94);
+      border-color:rgba(255,255,255,.55);
+      box-shadow:0 24px 60px rgba(0,0,0,.16);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+
+      gap:80px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      margin-bottom:18px;
+
+      color:var(--blue);
+
+      font-size:13px;
+      font-weight:700;
+
+      text-transform:uppercase;
+      letter-spacing:1.6px;
+    }
+
+    h1{
+      max-width:760px;
+
+      font-size:clamp(48px, 6vw, 76px);
+      line-height:1.02;
+      letter-spacing:-3.2px;
+    }
+
+    .hero p{
+      max-width:650px;
+      margin:26px 0 32px;
+
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .hero-card{
+      padding:34px;
+
+      background:var(--bg);
+
+      border:1px solid var(--line);
+      border-radius:18px;
+    }
+
+    .hero-card small{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .fleet-number{
+      display:block;
+
+      margin:8px 0 10px;
+
+      font-family:Manrope, sans-serif;
+      font-size:72px;
+      line-height:1;
+      letter-spacing:-4px;
+
+      color:var(--navy);
+    }
+
+    .hero-card p{
+      margin:0;
+      font-size:15px;
+    }
+
+    .mini-stats{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .mini-stat{
+      padding:18px;
+
+      background:#fff;
+
+      border:1px solid var(--line);
+      border-radius:12px;
+    }
+
+    .mini-stat strong{
+      display:block;
+
+      margin-bottom:3px;
+
+      color:var(--navy);
+      font-size:18px;
+    }
+
+    .mini-stat span{
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+
+      gap:70px;
+      align-items:start;
+    }
+
+    .about-copy p{
+      margin-top:0;
+
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .about-copy h3{
+      margin-bottom:18px;
+      font-size:26px;
+      letter-spacing:-1px;
+    }
+
+    .simple-list{
+      margin-top:28px;
+      border-top:1px solid var(--line);
+    }
+
+    .simple-row{
+      display:grid;
+      grid-template-columns:50px 1fr;
+
+      gap:14px;
+      padding:20px 0;
+
+      border-bottom:1px solid var(--line);
+    }
+
+    .simple-row span{
+      color:var(--blue);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .simple-row h3{
+      margin-bottom:4px;
+
+      font-size:17px;
+      letter-spacing:-.4px;
+    }
+
+    .simple-row p{
+      margin:0;
+      font-size:14px;
+    }
+
+    .quote-box{
+      margin-top:30px;
+      padding:8px 0 8px 24px;
+
+      border-left:3px solid var(--blue);
+
+      color:var(--navy);
+
+      font-family:Manrope, sans-serif;
+      font-size:28px;
+      line-height:1.35;
+      letter-spacing:-1px;
+    }
+
+    .quote-box small{
+      display:block;
+
+      margin-top:18px;
+
+      color:var(--muted);
+
+      font-family:Inter, sans-serif;
+      font-size:13px;
+      letter-spacing:0;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+
+      gap:16px;
+    }
+
+    .service-card{
+      min-height:220px;
+      padding:26px;
+
+      background:#fff;
+
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
+
+    .service-card .num{
+      margin-bottom:46px;
+
+      color:#9AA7B8;
+
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .service-card h3{
+      margin-bottom:10px;
+
+      font-size:18px;
+      letter-spacing:-.5px;
+    }
+
+    .service-card p{
+      margin:0;
+
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* =========================
+       FLEET
+    ========================== */
+
+    .fleet-section{
+      background:var(--navy);
+      color:#fff;
+    }
+
+    .fleet-section h2,
+    .fleet-section h3{
+      color:#fff;
+    }
+
+    .fleet-section .section-label{
+      color:#8FB5FF;
+    }
+
+    .fleet-section .section-intro p{
+      color:#B9C5D3;
+    }
+
+    .fleet-columns{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+
+      gap:18px;
+    }
+
+    .fleet-panel{
+      min-height:340px;
+      padding:32px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+
+      background:rgba(255,255,255,.035);
+    }
+
+    .fleet-panel.big{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .fleet-panel.big::before{
+      content:"116";
+
+      position:absolute;
+      top:2px;
+      right:18px;
+
+      color:rgba(255,255,255,.045);
+
+      font-family:Manrope, sans-serif;
+      font-size:116px;
+      font-weight:700;
+
+      letter-spacing:-7px;
+    }
+
+    .fleet-panel h3{
+      position:relative;
+
+      margin-bottom:10px;
+      font-size:26px;
+    }
+
+    .fleet-panel p{
+      position:relative;
+
+      max-width:620px;
+      margin:0;
+
+      color:#B9C5D3;
+      font-size:15px;
+    }
+
+    .brands{
+      display:grid;
+      gap:18px;
+    }
+
+    .brand-box{
+      padding:24px;
+
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+
+      background:rgba(255,255,255,.035);
+    }
+
+    .brand-box small{
+      color:#8FB5FF;
+      font-weight:600;
+    }
+
+    .brand-box h3{
+      margin:4px 0 6px;
+      font-size:21px;
+    }
+
+    .brand-box p{
+      margin:0;
+
+      color:#B9C5D3;
+      font-size:14px;
+    }
+
+    /* =========================
+       VALUES
+    ========================== */
+
+    .values{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+
+      gap:34px;
+    }
+
+    .value{
+      padding-top:18px;
+      border-top:2px solid var(--navy);
+    }
+
+    .value h3{
+      margin-bottom:10px;
+      font-size:20px;
+    }
+
+    .value p{
+      margin:0;
+
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* =========================
+       CONTACT / CAREER
+    ========================== */
+
+    .contact-section{
+      padding:85px 0;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+
+      gap:70px;
+      align-items:start;
+    }
+
+    .contact-details{
+      margin-top:28px;
+      border-top:1px solid var(--line);
+    }
+
+    .contact-row{
+      display:grid;
+      grid-template-columns:150px 1fr;
+
+      gap:20px;
+      padding:18px 0;
+
+      border-bottom:1px solid var(--line);
+
+      font-size:15px;
+    }
+
+    .contact-row span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .contact-note{
+      padding:28px;
+
+      background:var(--blue-soft);
+      border-radius:14px;
+    }
+
+    .contact-note h3{
+      margin-bottom:10px;
+      font-size:23px;
+    }
+
+    .contact-note p{
+      margin:0 0 20px;
+
+      color:#53647A;
+      font-size:15px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      padding:28px 0;
+
+      background:#fff;
+
+      border-top:1px solid var(--line);
+    }
+
+    .footer-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* =========================
+       TABLET
+    ========================== */
+
+    @media (max-width: 980px){
+
+      .hero-grid,
+      .about-grid,
+      .fleet-columns,
+      .contact-grid{
+        grid-template-columns:1fr;
+        gap:42px;
+      }
+
+      .service-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .values{
+        grid-template-columns:1fr;
+      }
+
+      .hero-card{
+        max-width:600px;
+      }
+
+      .nav-links{
+        position:fixed;
+
+        top:var(--header-height);
+        left:0;
+        right:0;
+
+        z-index:999;
+
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:0;
+
+        padding:10px 20px 24px;
+
+        background:#fff;
+
+        border-bottom:1px solid var(--line);
+
+        box-shadow:0 18px 40px rgba(10,37,64,.08);
+
+        opacity:0;
+        visibility:hidden;
+
+        transform:translateY(-12px);
+
+        transition:
+          opacity .2s ease,
+          transform .2s ease,
+          visibility .2s ease;
+      }
+
+      .nav-links.open{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
+      }
+
+      .nav-links a{
+        width:100%;
+
+        padding:14px 0;
+
+        border-bottom:1px solid var(--line);
+
+        font-size:16px;
+      }
+
+      .nav-links a:last-child{
+        border-bottom:0;
+      }
+
+      .contact-link{
+        margin-top:10px;
+
+        width:auto!important;
+        padding:11px 18px!important;
+
+        border:1px solid var(--navy)!important;
+      }
+
+      .menu-btn{
+        display:grid;
+        place-items:center;
+      }
+
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 650px){
+
+      :root{
+        --header-height:68px;
+      }
+
+      .container{
+        width:calc(100% - 28px);
+      }
+
+      nav{
+        min-height:68px;
+      }
+
+      .logo-img{
+        height:40px;
+        max-width:180px;
+      }
+
+      .menu-btn{
+        width:42px;
+        height:42px;
+        font-size:24px;
+      }
+
+      section{
+        padding:68px 0;
+        scroll-margin-top:78px;
+      }
+
+      .hero{
+        padding:72px 0 64px;
+        background-image:
+          linear-gradient(180deg, rgba(6,24,43,.88) 0%, rgba(6,24,43,.72) 60%, rgba(6,24,43,.58) 100%),
+          url("pozabackround.jpg");
+        background-position:58% center;
+      }
+
+      .hero-grid{
+        gap:34px;
+      }
+
+      .eyebrow{
+        margin-bottom:14px;
+
+        font-size:11px;
+        letter-spacing:1.3px;
+      }
+
+      h1{
+        font-size:42px;
+        line-height:1.05;
+        letter-spacing:-2px;
+      }
+
+      .hero p{
+        margin:21px 0 27px;
+
+        font-size:16px;
+        line-height:1.7;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .hero-card{
+        padding:24px;
+        border-radius:14px;
+      }
+
+      .fleet-number{
+        font-size:58px;
+      }
+
+      .mini-stats{
+        grid-template-columns:1fr;
+      }
+
+      .mini-stat{
+        padding:15px;
+      }
+
+      .section-intro{
+        margin-bottom:34px;
+      }
+
+      h2{
+        font-size:34px;
+        line-height:1.12;
+        letter-spacing:-1.5px;
+      }
+
+      .section-intro p{
+        font-size:15px;
+      }
+
+      .about-grid{
+        gap:38px;
+      }
+
+      .about-copy p{
+        font-size:15px;
+        line-height:1.7;
+      }
+
+      .about-copy h3{
+        font-size:23px;
+      }
+
+      .simple-row{
+        grid-template-columns:36px 1fr;
+        gap:10px;
+      }
+
+      .quote-box{
+        padding-left:18px;
+
+        font-size:22px;
+        line-height:1.4;
+      }
+
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+
+      .service-card{
+        min-height:auto;
+        padding:22px;
+      }
+
+      .service-card .num{
+        margin-bottom:28px;
+      }
+
+      .fleet-columns{
+        gap:14px;
+      }
+
+      .fleet-panel{
+        min-height:280px;
+        padding:24px;
+      }
+
+      .fleet-panel.big::before{
+        top:8px;
+        right:10px;
+
+        font-size:78px;
+      }
+
+      .fleet-panel h3{
+        font-size:23px;
+      }
+
+      .brand-box{
+        padding:20px;
+      }
+
+      .values{
+        gap:25px;
+      }
+
+      .contact-grid{
+        gap:34px;
+      }
+
+      .contact-row{
+        grid-template-columns:1fr;
+        gap:5px;
+
+        padding:16px 0;
+      }
+
+      .contact-note{
+        padding:22px;
+      }
+
+      .contact-note .btn{
+        width:100%;
+      }
+
+      .footer-row{
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:8px;
+      }
+
+    }
+
+    /* =========================
+       SMALL PHONES
+    ========================== */
+
+    @media (max-width: 400px){
+
+      .container{
+        width:calc(100% - 22px);
+      }
+
+      .logo-img{
+        height:36px;
+        max-width:155px;
+      }
+
+      h1{
+        font-size:37px;
+      }
+
+      h2{
+        font-size:31px;
+      }
+
+      .hero-card{
+        padding:20px;
+      }
+
+      .fleet-number{
+        font-size:52px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+
+      <nav>
+
+        <a class="logo" href="#acasa" aria-label="Sabiko">
+          <img
+            src="logo.png"
+            alt="SC Sabiko SRL"
+            class="logo-img"
+          >
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#despre">Despre</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#flota">Flotă</a>
+          <a href="#valori">Valori</a>
+          <a href="#cariere">Cariere</a>
+          <a href="#contact" class="contact-link">Contact</a>
+        </div>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Deschide meniul"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero" id="acasa">
+
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div>
+
+            <div class="eyebrow">
+              Transport rutier european
+            </div>
+
+            <h1>
+              Transport simplu.
+              Flotă serioasă.
+              Parteneriate pe termen lung.
+            </h1>
+
+            <p>
+              SC SABIKO SRL oferă transport rutier de mărfuri în România
+              și în Uniunea Europeană, cu 116 ansambluri proprii,
+              camioane Euro 6 și dispecerat non-stop.
+            </p>
+
+            <div class="hero-actions">
+
+              <a class="btn btn-primary" href="#despre">
+                Despre Sabiko
+              </a>
+
+              <a class="btn btn-secondary" href="#contact">
+                Contact
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero-card">
+
+            <small>
+              Flota Sabiko
+            </small>
+
+            <strong class="fleet-number">
+              116
+            </strong>
+
+            <p>
+              Ansambluri proprii cu prelate standard și mega,
+              pentru transport național și internațional.
+            </p>
+
+
+            <div class="mini-stats">
+
+              <div class="mini-stat">
+                <strong>Euro 6</strong>
+                <span>toate camioanele</span>
+              </div>
+
+              <div class="mini-stat">
+                <strong>GPS</strong>
+                <span>monitorizarea flotei</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DESPRE -->
+
+    <section id="despre">
+
+      <div class="container">
+
+        <div class="section-intro">
+
+          <div class="section-label">
+            Despre noi
+          </div>
+
+          <h2>
+            Experiență în transport și comerț.
+          </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-copy">
+
+            <p>
+              Activitatea SC SABIKO SRL se desfășoară în mai multe domenii:
+              depozit frigorific, comerț prin import-export de pește și produse
+              din pește, precum și transport internațional.
+            </p>
+
+            <p>
+              Portofoliul nostru de servicii europene de transport rutier de
+              marfă garantează eficiența transportului, indiferent de frontieră.
+              Angajații noștri găsesc soluția potrivită pentru nevoile
+              dumneavoastră, utilizând concepte clasice sau personalizate.
+            </p>
+
+            <p>
+              Operăm transporturi de mărfuri în România și transporturi
+              internaționale pe bază de contract în Uniunea Europeană.
+              Experiența noastră extinsă și procesele de calitate asigură
+              transportul în siguranță al mărfurilor la destinația dorită.
+            </p>
+
+
+            <div class="simple-list">
+
+              <div class="simple-row">
+
+                <span>01</span>
+
+                <div>
+                  <h3>Flotă proprie</h3>
+
+                  <p>
+                    116 ansambluri proprii, cu prelate standard și mega.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="simple-row">
+
+                <span>02</span>
+
+                <div>
+                  <h3>Transport internațional</h3>
+
+                  <p>
+                    Autocamioane disponibile pentru destinații din Europa.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="simple-row">
+
+                <span>03</span>
+
+                <div>
+                  <h3>Echipă cu experiență</h3>
+
+                  <p>
+                    Șoferi cu minimum 15 ani de experiență și dispecerat non-stop.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="about-copy">
+
+            <h3>
+              Un dispecer dedicat transportului dumneavoastră.
+            </h3>
+
+            <p>
+              Devenind clientul nostru, beneficiați de un dispecer de transport
+              dedicat, care preia comanda telefonic, prin e-mail sau fax.
+            </p>
+
+            <p>
+              Dispecerul se asigură că sunt respectate orele de încărcare și
+              descărcare, precum și livrarea mărfii în condiții de siguranță.
+            </p>
+
+            <p>
+              Vă punem la dispoziție autocamioane pentru destinații din Europa.
+            </p>
+
+
+            <div class="quote-box">
+
+              Soluții flexibile, comunicare directă și dispecerat non-stop.
+
+              <small>
+                SC SABIKO SRL
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICII -->
+
+    <section class="light-section" id="servicii">
+
+      <div class="container">
+
+        <div class="section-intro">
+
+          <div class="section-label">
+            Activitate
+          </div>
+
+          <h2>
+            Transport, depozitare și comerț.
+          </h2>
+
+          <p>
+            Activități complementare și soluții adaptate nevoilor
+            fiecărui partener.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+          <article class="service-card">
+
+            <div class="num">
+              01
+            </div>
+
+            <h3>
+              Transport rutier
+            </h3>
+
+            <p>
+              Transport de mărfuri în România și transport internațional
+              pe bază de contract în UE.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="num">
+              02
+            </div>
+
+            <h3>
+              Depozit frigorific
+            </h3>
+
+            <p>
+              Activitate de depozitare frigorifică,
+              parte din serviciile SC SABIKO SRL.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="num">
+              03
+            </div>
+
+            <h3>
+              Import-export
+            </h3>
+
+            <p>
+              Comerț cu pește și produse din pește,
+              prin operațiuni de import și export.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="num">
+              04
+            </div>
+
+            <h3>
+              Dispecerat non-stop
+            </h3>
+
+            <p>
+              Dispecer dedicat pentru preluarea comenzilor
+              și coordonarea transportului.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FLOTA -->
+
+    <section class="fleet-section" id="flota">
+
+      <div class="container">
+
+        <div class="section-intro">
+
+          <div class="section-label">
+            Flota
+          </div>
+
+          <h2>
+            116 ansambluri.
+            O flotă proprie modernă.
+          </h2>
+
+          <p>
+            Din anul 2004, parcul nostru auto s-a extins,
+            ajungând la 116 ansambluri cu prelate standard și mega.
+          </p>
+
+        </div>
+
+
+        <div class="fleet-columns">
+
+          <div class="fleet-panel big">
+
+            <h3>
+              Euro 6. Monitorizare GPS.
+            </h3>
+
+            <p>
+              Toate camioanele sunt Euro 6, monitorizate GPS
+              și au o vechime de cel mult 2 ani.
+              Flota proprie ne permite să oferim servicii
+              flexibile de transport mărfuri.
+            </p>
+
+          </div>
+
+
+          <div class="brands">
+
+            <div class="brand-box">
+
+              <small>
+                Prelate standard
+              </small>
+
+              <h3>
+                2.700 mm
+              </h3>
+
+              <p>
+                Înălțime utilă pentru ansamblurile
+                cu prelată standard.
+              </p>
+
+            </div>
+
+
+            <div class="brand-box">
+
+              <small>
+                Prelate mega
+              </small>
+
+              <h3>
+                3.000 mm
+              </h3>
+
+              <p>
+                Înălțime utilă pentru ansamblurile
+                cu prelată mega.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VALORI -->
+
+    <section id="valori">
+
+      <div class="container">
+
+        <div class="section-intro">
+
+          <div class="section-label">
+            Valori
+          </div>
+
+          <h2>
+            Lucrurile simple contează cel mai mult.
+          </h2>
+
+        </div>
+
+
+        <div class="values">
+
+          <div class="value">
+
+            <h3>
+              Seriozitate
+            </h3>
+
+            <p>
+              Respect pentru parteneri, termene și responsabilități.
+            </p>
+
+          </div>
+
+
+          <div class="value">
+
+            <h3>
+              Continuitate
+            </h3>
+
+            <p>
+              Flotă și structură potrivite pentru activitate constantă.
+            </p>
+
+          </div>
+
+
+          <div class="value">
+
+            <h3>
+              Comunicare
+            </h3>
+
+            <p>
+              Informații clare și contact direct cu partenerii.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CARIERE -->
+
+    <section id="cariere">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="section-intro">
+
+            <div class="section-label">
+              Cariere
+            </div>
+
+            <h2>
+              Alătură-te echipei Sabiko.
+            </h2>
+
+            <p>
+              Post disponibil: șofer.
+            </p>
+
+          </div>
+
+
+          <div class="contact-note">
+
+            <h3>
+              Șofer
+            </h3>
+
+            <p>
+              Trimiteți CV-ul la
+              <a href="mailto:office@sabiko.ro">
+                <strong>office@sabiko.ro</strong>
+              </a>.
+
+              Vă vom contacta în cel mai scurt timp
+              dacă aptitudinile dumneavoastră corespund
+              postului disponibil.
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="mailto:office@sabiko.ro?subject=Candidatur%C4%83%20-%20%C8%98ofer"
+            >
+              Trimite CV-ul
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section
+      class="contact-section light-section"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div>
+
+            <div class="section-label">
+              Contact
+            </div>
+
+            <h2>
+              SC SABIKO SRL
+            </h2>
+
+
+            <div class="contact-details">
+
+              <div class="contact-row">
+
+                <span>
+                  Adresă
+                </span>
+
+                <div>
+                  307350 Remetea Mare,<br>
+                  Timiș, România
+                </div>
+
+              </div>
+
+
+              <div class="contact-row">
+
+                <span>
+                  Registrul Comerțului
+                </span>
+
+                <div>
+                  J35/1354/21.04.1994
+                </div>
+
+              </div>
+
+
+              <div class="contact-row">
+
+                <span>
+                  CUI
+                </span>
+
+                <div>
+                  RO 5614141
+                </div>
+
+              </div>
+
+
+              <div class="contact-row">
+
+                <span>
+                  E-mail
+                </span>
+
+                <a href="mailto:office@sabiko.ro">
+                  office@sabiko.ro
+                </a>
+
+              </div>
+
+
+              <div class="contact-row">
+
+                <span>
+                  Telefon
+                </span>
+
+                <a href="tel:+40256230057">
+                  +40 256 230 057
+                </a>
+
+              </div>
+
+
+              <div class="contact-row">
+
+                <span>
+                  Website
+                </span>
+
+                <a
+                  href="https://sabiko.ro"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  sabiko.ro
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-note">
+
+            <h3>
+              Ai nevoie de informații?
+            </h3>
+
+            <p>
+              Pentru detalii despre companie,
+              transport sau posibilități de colaborare,
+              contactează direct echipa Sabiko.
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="mailto:office@sabiko.ro"
+            >
+              Trimite e-mail
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <div>
+        © <span id="year"></span> SC SABIKO SRL
+      </div>
+
+      <div>
+        J35/1354/21.04.1994 · RO 5614141
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener("click", () => {
+
+      const isOpen =
+        navLinks.classList.toggle("open");
+
+
+      document.body.classList.toggle(
+        "menu-open",
+        isOpen
+      );
+
+
+      menuBtn.textContent =
+        isOpen ? "×" : "☰";
+
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+    });
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+          document.body.classList.remove(
+            "menu-open"
+          );
+
+          menuBtn.textContent = "☰";
+
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        if(window.innerWidth > 980){
+
+          navLinks.classList.remove("open");
+
+          document.body.classList.remove(
+            "menu-open"
+          );
+
+          menuBtn.textContent = "☰";
+
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+
+      }
+    );
+
+
+    document.getElementById(
+      "year"
+    ).textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
